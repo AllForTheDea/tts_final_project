@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> 
+
+<%= render 'characterlines/form', characterline: @characterline %>
+<% @project.characterlines.each do |post| %>
+        <p>
+	    <%= post.character %>:
+	    <%= post.line %>
+	</p>
+<%end%>
+<br />
+<%= link_to 'Back', myprojects_path %>
+
+

@@ -1,0 +1,13 @@
+<div class="jumbotron" style="margin-top: 0px; margin-bottom: 0px, position:relative;">
+	<p style="position:absolute; top: 290px;">About Us</p>
+</div>
+
+<div class="container-fluid">
+	<div class="col-md-3"></div>
+	<div class ="col-md-6">
+		<% 20.times do |fact| %>
+		<%= Faker::ChuckNorris.fact%><br />
+		<% end%>
+	</div>
+	<div class="col-md-3"></div>
+</div>

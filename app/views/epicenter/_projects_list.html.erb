@@ -1,0 +1,9 @@
+
+<% @tracker.each do |record| %>
+	<% if record.user_id == current_user.id %>
+		<%= link_to @projects.find(record.project_id).title, myprojects_path(id: record.project_id) %> 
+		<%= link_to "Edit", edit_project_path(record.project) %>
+		<br />
+	<%end%>
+<%end%>
+<%= link_to "Create New Project", new_project_path(@project), class: "btn btn-primary"%>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @characterline.character %>
+</p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @characterline.line %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @characterline.project_id %>
+</p>
+
+<%= link_to 'Edit', edit_characterline_path(@characterline) %> |
+<%= link_to 'Back', characterlines_path %>
