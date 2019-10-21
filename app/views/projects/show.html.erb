@@ -7,14 +7,19 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> 
 
-<%= render 'characterlines/form', characterline: @characterline %>
+
 <% @project.characterlines.each do |post| %>
-        <p>
-	    <%= post.character %>:
-	    <%= post.line %>
-	</p>
+	<div class="container-fluid" style = "border-color: black;">
+		<div class="well" style = "border-color: black;">
+		   <span style = "font-weight: bold;"><%= post.character %>:</span> <%= post.line %>
+		</div>
+	</div>
+	
 <%end%>
 <br />
+
+<%= render 'characterlines/form', characterline: @characterline %>
 <%= link_to 'Back', myprojects_path %>
+
 
 
