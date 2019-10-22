@@ -1,10 +1,15 @@
 
+<table class = 'table'>
 <% @tracker.each do |record| %>
 	<% if record.user_id == current_user.id %>
-		<%= link_to @projects.find(record.project_id).title, myprojects_path(id: record.project_id) %> 
-		<%= link_to "Edit name", edit_project_path(record.project) %>| <%= link_to "Edit Script", @project %>
-
-		<br />
+		<tr>
+		<td><%= link_to @projects.find(record.project_id).title, myprojects_path(id: record.project_id) %></td>
+		<td><%= link_to "Edit name", edit_project_path(record.project) %> | <%= link_to "Edit Script", @project %></td>
+		</tr>
 	<%end%>
+	
 <%end%>
+</table>
+
+
 <%= link_to "Create New Project", new_project_path(@project), class: "btn btn-primary"%>

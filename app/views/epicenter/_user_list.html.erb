@@ -1,0 +1,8 @@
+<% @tracker.each do |record| %>
+	<% if record.project_id == @project.id %>
+
+		<%= @users.find(record.user_id).username %>
+
+	<%end%>
+	
+<%end%>

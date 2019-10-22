@@ -6,6 +6,7 @@ class EpicenterController < ApplicationController
   	@projects = Project.all
   	@tracker = UserProject.all
   	@lines = Characterline.all
+    @users = User.all
 
   	if params[:id].blank? == false
   		@project = Project.find(params[:id])
